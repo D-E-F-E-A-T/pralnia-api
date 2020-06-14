@@ -5,6 +5,7 @@ from wash import views
 
 router = DefaultRouter()
 router.register('tags', views.TagViewSet)
+router.register('clothes', views.ClotheViewSet)
 
 app_name = 'wash'
 
