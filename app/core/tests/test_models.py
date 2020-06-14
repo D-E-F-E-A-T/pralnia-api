@@ -51,3 +51,12 @@ class ModelTest(TestCase):
         )
 
         self.assertEqual(str(clothe), clothe.name)
+
+    def test_wash_str(self):
+        wash = models.Wash.objects.create(
+            user=sample_user(),
+            title='Jumper',
+            time_minutes=5,
+            price=5.00
+        )
+        self.assertEqual(str(wash), wash.title)
